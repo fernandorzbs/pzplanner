@@ -50,7 +50,7 @@ class SendMessageJob implements ShouldQueue
             sleep(2);
         } catch (\Exception $e) {
             Log::error("Excepción en SendMessageJob: " . $e->getMessage());
-            $this->release(30); // Reintentar después de 60 segundos en caso de excepción
+            $this->release(30);
         }
     }
 }
