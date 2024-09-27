@@ -13,8 +13,8 @@ class SendMessageJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $tries = 3;  // Definir el número de intentos antes de fallar definitivamente
-    public $timeout = 120;  // Opcionalmente, establecer un tiempo de espera (en segundos)
+    public $tries = 3;  
+    public $timeout = 120;  
 
     protected $telefono;
     protected $mensaje;
